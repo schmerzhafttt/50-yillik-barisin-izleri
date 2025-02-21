@@ -1,8 +1,3 @@
-Tübitak 2204-A Kıbrıs Barış Harekatı: 50 Yıllık Barışın İzleri:
-
----
-
-```markdown
 # 🇨🇾 Kıbrıs Barış Harekâtı Web Sitesi
 
 Bu proje, **Kıbrıs Barış Harekâtı** ile ilgili tarihsel bilgileri, görselleri ve röportajları kullanıcılarla paylaşmak amacıyla geliştirilmiştir. PHP tabanlı bir web sitesi olarak tasarlanmış ve kullanıcı geri bildirimleri de dahil olmak üzere zengin bir içerik sunmaktadır.
@@ -68,7 +63,7 @@ Web sitesi için bağlantı: [kibrisbarisharekati.org](https://kibrisbarishareka
 
 1️⃣ Depoyu klonlayın:
 ```bash
-git clone https://github.com/kullanici-adi/kibrisbarisharekati.git
+git clone https://github.com/schmerzhafttt/kibrisbarisharekati.git
 cd kibrisbarisharekati
 ```
 
@@ -111,8 +106,3 @@ Her türlü soru ve öneri için:
 ---
 
 ⭐ Eğer bu projeyi faydalı bulduysanız, GitHub'da bir yıldız bırakmayı unutmayın!
-```
-
----
-
-Bu yapı hem dosyalarınızı açıklıyor hem de projenizi profesyonel bir şekilde sunuyor. Gerekirse iletişim bilgilerini veya özel bölümleri düzenleyebilirim. Nasıl görünüyor? 🚀
