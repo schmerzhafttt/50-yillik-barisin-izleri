@@ -1,104 +1,118 @@
-[kibrisbarisharekati.org](https://kibrisbarisharekati.org) sitesi için 2204-A kapsamında bir `README.md` dosyası:
+Tübitak 2204-A Kıbrıs Barış Harekatı: 50 Yıllık Barışın İzleri:
+
+---
 
 ```markdown
 # 🇨🇾 Kıbrıs Barış Harekâtı Web Sitesi
 
-Merhaba! Bu proje, **Kıbrıs Barış Harekâtı**'nın 50. yıl dönümünü anmak ve bu önemli tarihî olayı daha geniş kitlelere tanıtmak amacıyla oluşturulmuş bir web sitesidir. Site, harekâtın tarihçesini, görsel materyallerini ve ilgili kaynakları içermektedir.
+Bu proje, **Kıbrıs Barış Harekâtı** ile ilgili tarihsel bilgileri, görselleri ve röportajları kullanıcılarla paylaşmak amacıyla geliştirilmiştir. PHP tabanlı bir web sitesi olarak tasarlanmış ve kullanıcı geri bildirimleri de dahil olmak üzere zengin bir içerik sunmaktadır.
 
 ---
 
-## 🌐 Site Özellikleri
+## 🌟 Özellikler
 
-- 📅 **Tarihçe**: Kıbrıs Barış Harekâtı'nın detaylı kronolojik anlatımı.
-- 🎥 **Videolar**: Harekâtla ilgili belgesel ve röportajlar.
-- 🗣️ **Mülakatlar**: Gaziler ve tarihçilerle yapılan özel söyleşiler.
-- 🖼️ **Galeri**: Harekât dönemine ait fotoğraf ve görseller.
-- 📚 **Kaynakça**: Konuyla ilgili akademik ve tarihî kaynakların listesi.
-- 💬 **Görüş ve Öneriler**: Ziyaretçilerin siteyle ilgili geri bildirimde bulunabileceği bölüm.
+- 📜 Tarihçe ve önemli olayların detaylı anlatımı (`tarihce.php`)
+- 🖼️ Galeri bölümü ile görsel arşiv (`galeri.php`)
+- 🎙️ Röportajlar ve özel mülakatlar (`mulakatlar.php`, `mulakat1.php`, `mulakat2.php`, `mulakat3.php`, `mulakat4.php`)
+- 🎥 YouTube videoları entegrasyonu (`youtube_videos.php`)
+- 📋 Ziyaretçi yorum ve geri bildirim bölümü (`review.php`, `feedback.txt`)
+- 📚 Kaynakça ve referanslar bölümü (`kaynakca.php`)
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma
+## 🔗 Canlı Demo
 
-### 1️⃣ Gerekli Bağımlılıkları Yükleyin
+Web sitesi için bağlantı: [kibrisbarisharekati.org](https://kibrisbarisharekati.org)
 
-Bu proje, modern web teknolojileri kullanılarak geliştirilmiştir. Çalıştırabilmek için aşağıdaki adımları izleyin:
+---
 
-- **Web Sunucusu**: Apache, Nginx veya yerel geliştirme için [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) gibi bir araç.
+## 📂 Proje Yapısı
 
-### 2️⃣ Projeyi Klonlayın
-
-```bash
-git clone https://github.com/kullanici-adi/kibris-baris-harekati-web.git
-cd kibris-baris-harekati-web
+```
+/HTDOCS
+│
+├── galeri/
+│   ├── arkaplan_resmi.png
+│   ├── icon.png
+│   ├── image.png
+│
+├── feedback.txt          # Ziyaretçi geri bildirimleri
+├── footer.php            # Sayfa alt bilgileri
+├── header.php            # Sayfa başlığı ve navigasyon
+├── index.php             # Ana sayfa
+├── kaynakca.php          # Kaynakça bölümü
+├── review.php            # Yorum bölümü
+├── script.js             # JavaScript işlevleri
+├── site.php              # Genel site ayarları
+├── style.css             # Stil dosyası
+├── tarihce.php           # Tarihsel bilgiler
+├── youtube_videos.php    # Video entegrasyonu
+│
+├── mulakatlar.php        # Mülakatlar genel sayfası
+│   ├── mulakat1.php      # 1. Mülakat
+│   ├── mulakat2.php      # 2. Mülakat
+│   ├── mulakat3.php      # 3. Mülakat
+│   ├── mulakat4.php      # 4. Mülakat
 ```
 
-### 3️⃣ Sunucuyu Başlatın
+---
 
-Eğer Live Server kullanıyorsanız:
+## ⚙️ Kurulum ve Çalıştırma
 
-- Proje klasörünü VSCode ile açın.
-- `index.html` dosyasına sağ tıklayın ve "Open with Live Server" seçeneğini tıklayın.
+### 📌 Gereksinimler
+- PHP 7.4+  
+- Apache veya Nginx web sunucusu  
+- MySQL (Gerekirse)  
 
-Alternatif olarak, terminal üzerinden Python'ın basit HTTP sunucusunu kullanabilirsiniz:
+### 🚀 Adım Adım Kurulum
 
+1️⃣ Depoyu klonlayın:
 ```bash
-# Python 3.x için
-python -m http.server 8000
-
-# Python 2.x için
-python -m SimpleHTTPServer 8000
+git clone https://github.com/kullanici-adi/kibrisbarisharekati.git
+cd kibrisbarisharekati
 ```
 
-### 4️⃣ Tarayıcıda Çalıştırın
+2️⃣ PHP sunucusunu başlatın:
+```bash
+php -S localhost:8000
+```
 
-Tarayıcınızda aşağıdaki adresi ziyaret edin:
-
+3️⃣ Tarayıcıda açın:
 ```
 http://localhost:8000
 ```
 
 ---
 
-## 📁 Proje Yapısı
+## ✍️ Geri Bildirim Sistemi
+
+Ziyaretçiler, geri bildirimlerini `feedback.txt` dosyasında saklanacak şekilde gönderebilir. Gönderilen her mesaj şu formatta kaydedilir:
 
 ```
-/kibris-baris-harekati-web
-│
-├── index.html         # Ana sayfa
-├── /assets            # CSS, JavaScript ve görüntü dosyaları
-│   ├── css
-│   │   └── style.css  # Stil dosyası
-│   ├── js
-│   │   └── scripts.js # JavaScript işlevleri
-│   └── images         # Görüntü dosyaları
-├── /pages
-│   ├── tarihce.html   # Tarihçe sayfası
-│   ├── videolar.html  # Videolar sayfası
-│   ├── mulakatlar.html# Mülakatlar sayfası
-│   ├── galeri.html    # Galeri sayfası
-│   ├── kaynakca.html  # Kaynakça sayfası
-│   └── iletisim.html  # İletişim sayfası
-└── README.md          # Proje dokümantasyonu
+İsim: [Ad Soyad]
+Email: [Email Adresi]
+Mesaj: [Mesaj İçeriği]
 ```
 
 ---
 
-## ❗ Lisans
+## 🔒 Lisans
 
 > **Tüm Hakları Saklıdır**  
-> Bu projedeki tüm içerik, yalnızca yazarın izniyle kullanılabilir. İzinsiz kullanım, kopyalama veya dağıtım yasaktır.
+> Bu proje yalnızca sahibinin izniyle kullanılabilir. İzinsiz kullanım, kopyalama veya dağıtım yasaktır.
 
 ---
 
-## ✉️ İletişim
+## 📞 İletişim
 
-Herhangi bir sorunuz veya öneriniz varsa, bizimle iletişime geçebilirsiniz:  
-📧 [almanciogluyigit838@gmail.com@example.com](mailto:gladionincx190@gmail.com)
+Her türlü soru ve öneri için:  
+📧 [gladionincx190@gmail.com](mailto:gladionincx190@gmail.com)
 
 ---
 
-⭐ **Projeyi beğendiyseniz, GitHub'da yıldız bırakmayı unutmayın!**
+⭐ Eğer bu projeyi faydalı bulduysanız, GitHub'da bir yıldız bırakmayı unutmayın!
 ```
 
-Bu `README.md` dosyası, projenizin amacını, özelliklerini ve kurulum adımlarını açıkça belirtmektedir. Ayrıca, proje yapısını ve iletişim bilgilerini de içermektedir. İhtiyaçlarınıza göre düzenleyebilir ve özelleştirebilirsiniz. 
+---
+
+Bu yapı hem dosyalarınızı açıklıyor hem de projenizi profesyonel bir şekilde sunuyor. Gerekirse iletişim bilgilerini veya özel bölümleri düzenleyebilirim. Nasıl görünüyor? 🚀
