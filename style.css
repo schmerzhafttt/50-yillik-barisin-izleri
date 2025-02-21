@@ -1,0 +1,296 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9 ; /* Açık renk */
+    color: #212122; /* Metin rengi */
+}
+
+h1, h2, h3 {
+    color: #85B3DD; /* Vurgu rengi */
+}
+
+p {
+    color: #4E4E51; /* Metin rengi */
+    line-height: 1.6;
+}
+
+/* Ana Konteyner */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* Ortalamak için */
+    align-items: center; /* Yatay ve dikey ortalama */
+    flex-direction: column; /* Kartlar alt alta gelecek şekilde */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #85B3DD; /* Vurgu rengi */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #4E4E51; /* Metin rengi */
+}
+
+.navbar a {
+    color: #EBEAE7; /* Açık renk */
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    color: #EBEAE7; /* Açık renk */
+}
+
+/* Butonlar */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #4E4E51; /* Metin rengi */
+    color: #EBEAE7; /* Açık renk */
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto; /* Butonu ortalamak için */
+}
+
+.btn:hover {
+    background-color: #85B3DD; /* Vurgu rengi */
+    color: #EBEAE7; /* Açık renk */
+}
+
+.btn .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Kartlar */
+.card {
+    background-color: #EBEAE7; /* Açık renk */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center; /* İçeriği ortalamak için */
+    margin: 0 auto; /* Kartları ortalamak için */
+    text-align: center; /* Kart içeriğini ortalamak için */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #85B3DD; /* Vurgu rengi */
+}
+
+.card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #85B3DD; /* Vurgu rengi */
+}
+
+.card .card-description {
+    font-size: 1rem;
+    margin: 20px 0;
+    color: #4E4E51; /* Metin rengi */
+}
+
+/* Footer */
+footer {
+  background-color: #A8D1F8; /* Footer arka plan rengi */
+  text-align: center;
+  padding: 15px 4px;
+  color: #000; /* Yazı rengi */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+  position: fixed;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .card {
+        max-width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin: 5px 0;
+    }
+}
+
+/* Video Bölümü */
+.video-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Kartlar arasındaki boşluk */
+    justify-content: center; /* Kartların ortalanması */
+}
+
+.card {
+    background-color: #EBEAE7; /* Açık renk */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 45%; /* Daha kompakt bir genişlik */
+    max-width: 400px; /* Kartın maksimum genişliği */
+    aspect-ratio: 16 / 14; /* Kartın 16:9 oranında olması */
+    position: relative;
+    margin: 0 auto; /* Ortalamak için */
+}
+
+.card iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover; /* Videoların düzgün bir şekilde yerleşmesi */
+}
+
+.card h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #85B3DD; /* Vurgu rengi */
+}
+
+.card p {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4E4E51; /* Metin rengi */
+}
+
+/* Modal Stili */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #555;
+}
+
+/* Header */
+header {
+  background-color: #A8D1F8; /* Header arka plan rengi */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 1px;
+}
+
+-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}.header
+
+.logo img {
+  width: 30px; /* İkon boyutu */
+  height: 30px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000; /* Yazı rengi */
+}
+
+
+/* From Uiverse.io by zjssun */ 
+button {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #3A3B3C;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #3A3B3C;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
+#btn:hover,
+:focus {
+  color: #3A3B3C;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #3A3B3C, 0 0 10px #3A3B3C, 0 0 20px #3A3B3C;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
